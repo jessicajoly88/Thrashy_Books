@@ -1,7 +1,14 @@
 <ul>
   <% @novels.each do |novel| %>
-    <li><%= link_to novel.title, novel_path(novel) %></li>
+    <li>
+      <%= link_to content_tag(:span, "", class:"glyphicon glyphicon-heart"), edit_novel_path(novel.id, upvote:true) %>
+      <small><%= novel.rating %>Likes</small>
+      <small><%= ((Time.now - novel.created_at)/60).round(0)%>minutes </small>
+      <div class="novel_title">
+        <%= link_to novel.title, novel_path(novel) %> by: <%=novel.author %>
+      </div>
+    </li>
   <% end %>
 </ul>
 
-<%= link_to "Add a novel", new_novel_path %>
+<span class="glyphicon"></span>

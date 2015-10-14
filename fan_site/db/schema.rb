@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20151014165107) do
   create_table "novels", force: :cascade do |t|
     t.string   "author"
     t.string   "title"
-    t.string   "rating"
+    t.integer  "rating"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
