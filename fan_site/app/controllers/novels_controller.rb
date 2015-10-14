@@ -24,7 +24,6 @@ class NovelsController < ApplicationController
   def edit
     @novel = Novel.find(params[:id])
     if params[:upvote]
-      binding.pry
       new_rating = @novel.rating + 1
       @novel.update(rating: new_rating)
       redirect_to novels_path
