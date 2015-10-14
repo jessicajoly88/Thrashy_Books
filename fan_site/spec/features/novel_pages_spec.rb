@@ -37,3 +37,12 @@ describe "the edit a novel process" do
     expect(page).to have_content 'errors'
   end
 end
+
+describe "the delete a novel process" do
+  it "deletes a novel" do
+    novel = Novel.create(:author => "Danielle Steele", :description => "Hot and Steamy", :title => "Betrayal")
+    visit novel_path(novel)
+    click_on 'Delete'
+    expect(page).to_not have_content 'Betrayal'
+  end
+end
