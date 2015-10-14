@@ -21,6 +21,19 @@ class NovelsController < ApplicationController
     end
   end
 
+  def edit
+    @novel = Novel.find(params[:id])
+  end
+
+  def update
+    @novel = Novel.find(params[:id])
+    if @novel.update(novel_params)
+      redirect_to novels_path
+    else
+      render :edit
+    end
+  end
+
 private
   def novel_params
     params.require(:novel).permit(:author, :title, :description)

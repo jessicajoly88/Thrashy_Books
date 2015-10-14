@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "the add a novel process" do 
+describe "the add a novel process" do
   it "adds a new novel" do
     visit novels_path
     click_on "Add a novel"
@@ -15,5 +15,16 @@ describe "the add a novel process" do
     visit new_novel_path
     click_on 'Create Novel'
     expect(page).to have_content 'errors'
+  end
+end
+
+describe "the edit a novel process" do
+  it "edits a novel" do
+    novel = Novel.create(:author => "Danielle Steele", :description => "Hot and Steamy", :title => "Betrayal")
+    visit novel_path(novel)
+    click_on 'Edit'
+    fill_in 'Title', :with => 'Hawt'
+    click_on 'Update Novel'
+    expect(page).to have_content 'Hawt'
   end
 end
