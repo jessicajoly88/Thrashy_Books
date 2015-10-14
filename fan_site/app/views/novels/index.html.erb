@@ -1,7 +1,9 @@
-<h1>Romance Novels</h1>
+<center>
+<h1>Clasy Ladies, Thrashy Books</h1>
+</center>
 
 <ul>
   <% @novels.each do |novel| %>
-    <li><%= novel.title %></li>
+    <li><%= link_to novel.title, novel_path(novel) %></li>
   <% end %>
 </ul>

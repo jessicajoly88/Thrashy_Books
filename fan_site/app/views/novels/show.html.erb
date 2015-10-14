@@ -1,0 +1,11 @@
+<center>
+<h1><%= @novel.title %></h1>
+</center>
+<ul>
+  <li>Author: <%=@novel.author %></li>
+  <li> Description: <%=@novel.description %></li>
+  <li> Rating: <%=@novel.rating%></li>
+</ul>
+
+
+<p><%=link_to "Return to Novels", novels_path %></p>
