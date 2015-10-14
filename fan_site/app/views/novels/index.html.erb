@@ -1,7 +1,3 @@
-<center>
-<h1>Clasy Ladies, Thrashy Books</h1>
-</center>
-
 <ul>
   <% @novels.each do |novel| %>
     <li><%= link_to novel.title, novel_path(novel) %></li>
