@@ -1,11 +1,29 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.jumbotron h1 {
+  color:slate;
+}
+
 .main-jumbotron {
-  background-image: url("/assets/images/fire_illustration.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("background_image.jpg");
   text-align: center;
   background-size: cover;
   background-position: center center;
   margin:-20px;
   padding: 0px;
+  height: 425px;
+}
+
+.navbar {
+   border: none;
+}
+
+.navbar-link {
+  color: black !important;
+  font-size: 1.0em;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
 }
