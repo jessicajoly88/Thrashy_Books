@@ -1,6 +1,9 @@
 class NovelsController < ApplicationController
   def index
-    @novels = Novel.all
+    @novels = Novel.all.sort_by {|novel|
+      (novel.rating + ((1/(Time.new - novel.created_at) * 2000)))
+    }
+    @novels.reverse!
   end
 
   def show
