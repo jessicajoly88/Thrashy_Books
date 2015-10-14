@@ -27,4 +27,13 @@ describe "the edit a novel process" do
     click_on 'Update Novel'
     expect(page).to have_content 'Hawt'
   end
+
+  it "gives error when no title or description or author is entered" do
+    novel = Novel.create(:author => "Danielle Steele", :description => "Hot and Steamy", :title => "Betrayal")
+    visit novel_path(novel)
+    click_on 'Edit'
+    fill_in 'Title', :with => ''
+    click_on 'Update Novel'
+    expect(page).to have_content 'errors'
+  end
 end

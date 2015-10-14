@@ -10,5 +10,8 @@
 
 
 <p><%= link_to "Edit", edit_novel_path(@novel) %></p>
+<p><%= link_to "Delete", novel_path(@novel),
+                        :data => {:confirm =>"You sure?",
+                                  :method => "delete"} %></p>
 
 <p><%= link_to "Return to Novels", novels_path %></p>
