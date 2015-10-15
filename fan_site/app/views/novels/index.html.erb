@@ -3,7 +3,7 @@
     <li>
       <br>
       <div class="novel-display">
-        <%= link_to novel.title, novel_path(novel) %><%= link_to content_tag(:span, "", class:"glyphicon glyphicon-heart"), edit_novel_path(novel.id, upvote:true) %>
+        <%= link_to novel.title, novel_path(novel) %> <%= link_to content_tag(:span, "", class:"glyphicon glyphicon-heart"), edit_novel_path(novel.id, upvote:true) %>
       </div>
       <small><%= novel.rating %> Likes</small>
       <small>Posted <%= ((Time.now - novel.created_at)/60).round(0)%> minutes ago </small>
