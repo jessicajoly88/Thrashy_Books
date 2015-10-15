@@ -15,7 +15,23 @@
   <center>
   <li><p><%= link_to "Edit", edit_novel_path(@novel), class:"btn btn-default" %>  <%= link_to "Delete", novel_path(@novel),
                               :data => {:confirm =>"You sure?",
-                              :method => "delete"}, class:"btn btn-default" %></p></li>
+                              :method => "delete"}, class:"btn btn-default" %> <%= link_to "Review", new_novel_review_path(@novel), class:"btn btn-danger" %></p></li>
 
   <center>
+
+  <% if @novel.reviews.any? %>
+    <ul>
+      <% @novel.reviews.each do |review| %>
+        <li>
+          <%= review.user_name %>
+          <%= review.created_at %>
+          <%= review.description %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+
+
+
 </div>
