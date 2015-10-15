@@ -1,0 +1,20 @@
+Is the Github documentation - commits and README - thorough and descriptive?
+---- incomplete - README suspiciously looks like a copy
+Is there good spec coverage?
+---- Better than ours, for sure, probably the best ive seen all day
+Do all specs pass?
+---- 13 examples, 2 failures :(
+Is the application logic clear and easy to navigate?
+---- So far, so good (not helpful comments, but it is easy to understand)
+Can you make a test payment through Stripe?
+---- mostly peeved at this part, unsure of how to purchase novels without this stripe
+Is the site user-friendly?
+---- not appropriate for anyone under 5, but a 5 year old could use it
+Are there opportunities for refactoring?
+---- we took a look at errthang, and it seems like everything is fairly solid
+What features stand out?
+--- the colors, look and feel, layout, the image, the heart is pretty neat, cool fonts, overall girl, your style is fabulousssssssss. ok maybe a little smaller title
+What features could be improved?
+---- still wondering how to buy these novels pls - the only thing i might add is perhaps an about page to describe more clearly the mission statement of this enterprise
+Do you have any additional constructive criticism or positive feedback to share?
+---- u have gud taste, what is ur #
