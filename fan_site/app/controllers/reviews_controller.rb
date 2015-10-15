@@ -14,6 +14,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @novel = Novel.find(params[:novel_id])
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to novel_path(@novel)
+  end
+
 
   private
     def review_params
