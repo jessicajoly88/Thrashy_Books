@@ -33,11 +33,11 @@
       <% @novel.reviews.each do |review| %>
         <div class= "review-display">
           <li><strong><%= review.user_name %></strong>, <%= review.created_at %></li>
-          <li> <%= review.description %> </li>
+          <li> <%= review.description %>
+          <%= link_to "Delete", novel_review_path(@novel, review),
+                                    :data => {:confirm => "Are you sure?",
+                                    :method => "delete"}, class:"btn btn-default" %> </li>
         </div>
-        <%= link_to "Delete", novel_review_path(@novel, review),
-                                :data => {:confirm => "Are you sure?",
-                                :method => "delete"}, class:"btn btn-danger" %>
         <br>
       <% end %>
     </ul>
