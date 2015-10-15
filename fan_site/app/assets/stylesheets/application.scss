@@ -3,6 +3,7 @@
 
 .jumbotron h1 {
   color:slate;
+  font-size: 6em;
 }
 
 .main-jumbotron {
@@ -12,7 +13,7 @@
   background-position: center center;
   margin:-20px;
   padding: 0px;
-  height: 425px;
+  height: 445px;
 }
 
 .navbar {
@@ -30,7 +31,7 @@ body {
   background-color: #FFE4E1;
 }
 
-.novel_title {
+.novel-display {
   font-size: 1.8em;
 }
 
@@ -39,4 +40,24 @@ a {
 
 li {
   list-style-type: none;
+}
+
+.novel-header {
+  margin-top:4rem;
+  font-size: 3em;
+  color:black;
+  font-weight: 400;
+  text-align:center;
+}
+
+.novel-author {
+  font-size: 1.3em;
+  text-align:center;
+}
+
+.novel-details{
+  font-size: 1.2em;
+  font-weight:300;
+  max-width:85%;
+  margin-left:6%;
 }

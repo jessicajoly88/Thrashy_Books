@@ -1,14 +1,19 @@
-<center>
-<h1><%= @novel.title %></h1>
-<h5>By: <%=@novel.author %></h5>
-</center>
-<ul>
-
-  <li> Description: <%=@novel.description %></li>
-  <li> Rating: <%=@novel.rating%></li>
-</ul>
-
-<p><%= link_to "Edit", edit_novel_path(@novel), class:"btn btn-default" %></p>
-<p><%= link_to "Delete", novel_path(@novel),
-                        :data => {:confirm =>"You sure?",
-                                  :method => "delete"}, class:"btn btn-default" %></p>
+<div class="col-md-10 col-md-offset-1">
+  <div class="novel-header">
+     <%= @novel.title %>
+  </div>
+  <div class="novel-details">
+    <li> Author: <%= @novel.author %> </li>
+    <li> Likes: <%=@novel.rating%></li>
+  </div>
+  <hr>
+  <div class="novel-description">
+  <li> <%=@novel.description %></li>
+  </div>
+  <br>
+  <br>
+  <p><%= link_to "Edit", edit_novel_path(@novel), class:"btn btn-default" %></p>
+  <p><%= link_to "Delete", novel_path(@novel),
+                          :data => {:confirm =>"You sure?",
+                                   :method => "delete"}, class:"btn btn-default" %></p>
+</div>
